@@ -8,7 +8,7 @@ const PostForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/postData", {
+      const response = await axios.post("https://stop-to-repost-server.vercel.app/postData", {
         url,
       });
       setMessage({ text: response.data.message, type: "success" });
